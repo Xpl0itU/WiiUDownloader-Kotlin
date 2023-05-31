@@ -366,17 +366,13 @@ fun getTitles(
 }
 
 fun main(args: Array<String>) {
-    /*if (args.isEmpty()) {
+    if (args.isEmpty()) {
         println("Usage: [TitleID]")
         exitProcess(1)
-    }*/
-    /*if (args[0].length != 16) {
+    }
+    if (args[0].length != 16) {
         println("Wrong title id length, must be 16")
         exitProcess(1)
     }
-    if (args[1].length != 32) {
-        println("Wrong title id length, must be 16")
-        exitProcess(1)
-    }*/
-    getTitles(listOf("0005000010101C00"), onlineKeys = true, outputDir = File("install"))
+    getTitles(listOf(args[0]), onlineKeys = true, outputDir = File("install"))
 }
